@@ -1,0 +1,14 @@
+screen: "Login"
+specs:
+  verify_hello_text:
+    text: "Hello"
+    type: "verify"
+    matcher: "one" # "nothing", "one", "2"
+  tap_next_button:
+    key: "nextButton"
+    type: "tap"
+    delay: 500
+  enter_number_field:
+    key: "numberField"
+    type: "enter"
+    text: "123456"
