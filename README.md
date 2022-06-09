@@ -1,5 +1,7 @@
 # integration_spec
 
+[![pub package](https://img.shields.io/pub/v/integration_spec.svg)](https://pub.dartlang.org/packages/integration_spec)
+
 Generate Page Object Model dart class by spec.yml
 
 ## Features
@@ -15,6 +17,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^2.1.11
+  integration_spec: ^0.0.1
+```
+
+or
+
+```yaml
+dev_dependencies:
   integration_spec:
     git: https://github.com/prongbang/integration_spec.git
 ```
@@ -94,5 +103,26 @@ class LoginTestScreen extends TestScreen {
 		await tapNextButton();
 		await enterNumberField();
 	}
+}
+```
+
+- login_test.dart
+
+```dart
+import 'package:flutter_test/flutter_test.dart';
+import 'package:integration_test/integration_test.dart';
+
+import 'login_test_spec.screen.dart';
+
+void main() {
+  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+
+  testWidgets(
+    'Should OTP success when Login and OTP success',
+    (tester) async {
+      // Login Screen
+      await LoginTestScreen(tester).run();
+    },
+  );
 }
 ```
