@@ -1,6 +1,6 @@
 name: integration_spec
 description: Generate Page Object Model dart class by spec.yml
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/prongbang/integration_spec
 
 environment:

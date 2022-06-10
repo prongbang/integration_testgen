@@ -2,6 +2,8 @@
 
 [![pub package](https://img.shields.io/pub/v/integration_spec.svg)](https://pub.dartlang.org/packages/integration_spec)
 
+# DISCONTINUED
+
 Generate Page Object Model dart class by spec.yml
 
 ## Features
