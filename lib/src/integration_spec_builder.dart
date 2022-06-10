@@ -12,8 +12,6 @@ class IntegrationSpecBuilder implements Builder {
     /// Each `buildStep` has a single input.
     var inputId = buildStep.inputId;
 
-    print('inputId: $inputId');
-
     if (inputId.extension != '.yml') {
       print(
           'The extension ${inputId.extension} unsupported, Please change to .yml');

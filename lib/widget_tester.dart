@@ -7,18 +7,24 @@ extension WidgetTesterExtension on WidgetTester {
     Finder finder, {
     Duration timeout = const Duration(seconds: 60),
   }) async {
-    bool timerDone = false;
+    bool timerFound = false;
     final timer = Timer(
-        timeout, () => throw TimeoutException("Pump until has timed out."));
-    while (timerDone != true) {
+      timeout,
+      () {
+        throw TimeoutException("Pump until found has timed out.");
+      },
+    );
+    while (timerFound != true) {
       await pump();
       final found = any(finder);
-      if (found) timerDone = true;
+      if (found) {
+        timerFound = true;
+      }
     }
     timer.cancel();
   }
 
   Future<void> delay(int milliseconds) async {
-    await Future<void>.delayed(Duration(milliseconds: milliseconds));
+    await Future.delayed(Duration(milliseconds: milliseconds));
   }
 }
