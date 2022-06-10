@@ -19,6 +19,13 @@ dart compile exe bin/integration_spec.dart -o bin/integration_spec
 
 ## Usage
 
+- pubspec.yml
+
+```yaml
+dev_dependencies:
+  widget_tester_extension: ^0.0.1
+```
+
 - Create spec `login_test_spec.yml`
 
 ```yaml
