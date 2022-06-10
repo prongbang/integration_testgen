@@ -1,33 +1,20 @@
 # integration_spec
 
-[![pub package](https://img.shields.io/pub/v/integration_spec.svg)](https://pub.dartlang.org/packages/integration_spec)
-
-# DISCONTINUED
-
 Generate Page Object Model dart class by spec.yml
-
-## Features
-
-- Generate Page Object Model dart class by spec.yml
 
 ## Getting started
 
+- Clone project 
+
 ```yaml
-dev_dependencies:
-  integration_test:
-    sdk: flutter
-  flutter_test:
-    sdk: flutter
-  build_runner: ^2.1.11
-  integration_spec: ^0.0.1
+git clone https://github.com/prongbang/integration_spec.git
+cd integration_spec
 ```
 
-or
+- Build to binary file
 
 ```yaml
-dev_dependencies:
-  integration_spec:
-    git: https://github.com/prongbang/integration_spec.git
+dart compile exe bin/integration_spec.dart -o bin/integration_spec
 ```
 
 ## Usage
@@ -54,12 +41,12 @@ specs:
 ## Run to generate in root project
 
 ```shell
-dart run build_runner build 
+time bin/integration_spec
 ```
 
 ## Output
 
-- login_test_spec.screen.dart
+- login_test_screen.dart
 
 ```dart
 import 'package:flutter/material.dart';
@@ -99,7 +86,6 @@ class LoginTestScreen extends TestScreen {
 		await tester.pumpAndSettle();
 	}
 
-	@override
 	Future<void> run() async {
 		await verifyHelloText();
 		await tapNextButton();

@@ -1,8 +1,0 @@
-# Read about `build.yaml` at https://pub.dev/packages/build_config
-builders:
-  integrationSpecBuilder:
-    import: "package:integration_spec/src/builder.dart"
-    builder_factories: [ "integrationSpecBuilder" ]
-    build_extensions: { "_spec.yml": [ ".screen.dart" ] }
-    auto_apply: root_package
-    build_to: source
