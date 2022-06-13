@@ -4,7 +4,14 @@ Generate Page Object Model dart class by spec.yml
 
 ## Getting started
 
+- Now install the application via homebrew
 
+```shell
+$ brew tap prongbang/homebrew-formulae
+$ brew install integration_testgen
+```
+
+or
 
 - Clone project 
 
@@ -109,7 +116,7 @@ class LoginTestScreen extends TestScreen {
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
-import 'login_test_spec.screen.dart';
+import 'login_test_screen.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
