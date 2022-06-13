@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:integration_spec/integration_spec.dart';
+import 'package:integration_testgen/integration_testgen.dart';
 import 'package:path/path.dart' as p;
 import 'package:yaml/yaml.dart';
 

@@ -1,20 +1,22 @@
-# integration_spec
+# integration_testgen
 
 Generate Page Object Model dart class by spec.yml
 
 ## Getting started
 
+
+
 - Clone project 
 
 ```yaml
-git clone https://github.com/prongbang/integration_spec.git
-cd integration_spec
+git clone https://github.com/prongbang/integration_testgen.git
+cd integration_testgen
 ```
 
 - Build to binary file
 
 ```yaml
-dart compile exe bin/integration_spec.dart -o bin/integration_spec
+dart compile exe bin/integration_testgen.dart -o bin/integration_testgen
 ```
 
 ## Usage
@@ -48,7 +50,7 @@ specs:
 ## Run to generate in root project
 
 ```shell
-time bin/integration_spec
+time bin/integration_testgen
 ```
 
 ## Output
@@ -58,8 +60,8 @@ time bin/integration_spec
 ```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:integration_spec/integration_spec.dart';
-import 'package:integration_spec/widget_tester.dart';
+import 'package:integration_testgen/integration_testgen.dart';
+import 'package:integration_testgen/widget_tester.dart';
 
 class LoginTestScreen extends TestScreen {
 	final WidgetTester tester;

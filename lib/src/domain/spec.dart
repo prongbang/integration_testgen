@@ -1,4 +1,4 @@
-import 'package:integration_spec/src/domain/spec_config.dart';
+import 'package:integration_testgen/src/domain/spec_config.dart';
 
 class Spec {
   String name;
