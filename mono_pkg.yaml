@@ -1,9 +1,0 @@
-sdk:
-  - 2.14.0
-  - dev
-
-stages:
-  - analyze_and_format:
-      - group:
-          - format
-          - analyze: --fatal-infos .

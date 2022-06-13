@@ -1,4 +1,4 @@
-import 'package:integration_spec/src/domain/spec.dart';
+import 'package:integration_testgen/src/domain/spec.dart';
 
 class Screen {
   String name;
