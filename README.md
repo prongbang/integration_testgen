@@ -62,10 +62,10 @@ specs:
     text: "123456"
 ```
 
-## Run to generate in root project
+## Run to generate in `project/integration_test/login`
 
 ```shell
-time bin/integration_testgen
+integration_testgen
 ```
 
 ## Output
