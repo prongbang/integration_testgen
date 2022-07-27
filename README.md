@@ -35,7 +35,15 @@ dev_dependencies:
   widget_tester_extension: ^0.0.1
 ```
 
-- Create spec `login_test_spec.yml`
+- Create spec `login_test_spec.yml` in `integration_test/login` folder
+
+```shell
+project
+  - integration_test
+    - login/login_test_spec.yml
+```
+
+and enter script
 
 ```yaml
 screen: "Login"
@@ -63,6 +71,13 @@ time bin/integration_testgen
 ## Output
 
 - login_test_screen.dart
+
+```shell
+project
+  - integration_test
+    - login/login_test_spec.yml
+    - login/login_test_screen.dart
+```
 
 ```dart
 import 'package:flutter/material.dart';
@@ -111,6 +126,14 @@ class LoginTestScreen extends TestScreen {
 ```
 
 - login_test.dart
+
+```shell
+project
+  - integration_test
+    - login/login_test_spec.yml
+    - login/login_test_screen.dart
+    - login/login_test.dart
+```
 
 ```dart
 import 'package:flutter_test/flutter_test.dart';
