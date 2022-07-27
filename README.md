@@ -11,7 +11,7 @@ $ brew tap prongbang/homebrew-formulae
 $ brew install integration_testgen
 ```
 
-or
+Or Install Manual
 
 - Clone project 
 
