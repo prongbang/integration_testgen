@@ -10,6 +10,8 @@ class Builder {
   final _screenSuffix = '_screen.dart';
 
   Future<bool> build(String currentPath) async {
+    List<bool> result = [];
+
     final directory = Directory(currentPath);
     for (var file in directory.listSync()) {
       if (await checkFileSupported(file)) {
@@ -30,8 +32,18 @@ class Builder {
 
         /// Write to file
         final files = await targetFile.writeAsString(sourceCode);
-        return await files.exists();
+
+        /// Result
+        final isExists = await files.exists();
+        if (!isExists) {
+          print('[ERROR] Generating file $targetFilename');
+        }
+        result.add(isExists);
       }
+    }
+
+    if (result.isNotEmpty) {
+      return result.every((element) => element);
     }
     return false;
   }

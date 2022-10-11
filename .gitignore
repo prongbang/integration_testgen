@@ -28,3 +28,7 @@ migrate_working_dir/
 .dart_tool/
 .packages
 build/
+
+# Example
+login_terms_test_spec.yml
+login_test_spec.yml
