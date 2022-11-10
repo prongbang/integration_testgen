@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:integration_testgen/integration_testgen.dart';
+import 'package:integration_testgen/src/domain/spec_action.dart';
 import 'package:path/path.dart' as p;
 import 'package:yaml/yaml.dart';
 
@@ -129,6 +130,27 @@ class Builder {
         case SpecType.enter:
           outputBuffer.writeln(
               "\t\tawait tester.enterText($finderName, '${spec.config?.text}');");
+          break;
+      }
+
+      /// Build input action
+      final action = spec.config?.action ?? '';
+      switch (action) {
+        case SpecAction.go:
+        case SpecAction.none:
+        case SpecAction.done:
+        case SpecAction.send:
+        case SpecAction.next:
+        case SpecAction.join:
+        case SpecAction.route:
+        case SpecAction.search:
+        case SpecAction.newline:
+        case SpecAction.previous:
+        case SpecAction.continueAction:
+        case SpecAction.emergencyCall:
+        case SpecAction.unspecified:
+          outputBuffer.writeln(
+              "\t\tawait tester.testTextInput.receiveAction(TextInputAction.${action});");
           break;
       }
 

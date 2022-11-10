@@ -26,6 +26,41 @@ cd integration_testgen
 dart compile exe bin/integration_testgen.dart -o bin/integration_testgen
 ```
 
+## Configuration
+
+### Test case name
+
+- `verify_test_case_name:` - Prefix `verify_` for verify finder `text` or `key`
+- `tap_test_case_name:` - Prefix `tap_` for tap finder `text` or `key`
+- `enter_test_case_name:` - Prefix `enter_` for enter text
+
+### Finder
+
+- `text: "xxxx"` - Find by text
+- `key: "xxxx"` - Find by key
+
+### Type
+
+- `type: "verify"` - Matcher by finder
+- `type: "tap"` - Tap by finder
+- `type: "enter"` - Enter `text` by finder
+
+### Action
+
+- `action: "go"` - Action `go` on keyboard
+- `action: "none"` - Action `none` on keyboard
+- `action: "done"` - Action `done` on keyboard
+- `action: "send"` - Action `send` on keyboard
+- `action: "next"` - Action `next` on keyboard
+- `action: "join"` - Action `join` on keyboard
+- `action: "route"` - Action `route` on keyboard
+- `action: "search"` - Action `search` on keyboard
+- `action: "newline"` - Action `newline` on keyboard
+- `action: "previous"` - Action `previous` on keyboard
+- `action: "continueAction"` - Action `continueAction` on keyboard
+- `action: "emergencyCall"` - Action `emergencyCall` on keyboard
+- `action: "unspecified"` - Action `unspecified` on keyboard
+
 ## Usage
 
 - pubspec.yml

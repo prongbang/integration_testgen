@@ -4,6 +4,7 @@ class SpecConfig {
   String? key;
   String? text;
   String type;
+  String? action;
   int? delay;
   String? matcher;
 
@@ -11,6 +12,7 @@ class SpecConfig {
     this.key,
     this.text,
     this.type = '',
+    this.action = '',
     this.delay,
     this.matcher,
   });
@@ -20,6 +22,7 @@ class SpecConfig {
       key: json['key'],
       text: json['text'],
       type: json['type'],
+      action: json['action'],
       delay: json['delay'],
       matcher: json['matcher'],
     );
@@ -30,6 +33,7 @@ class SpecConfig {
     data['key'] = key;
     data['text'] = text;
     data['type'] = type;
+    data['action'] = action;
     data['delay'] = delay;
     data['matcher'] = matcher;
     return data;
